@@ -1,18 +1,200 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
-
+    tools:context=".MainActivity"
+    android:orientation="vertical">
     <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/box2bg"
+        android:text="First quarter"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginTop="10dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="0.3"
+            android:layout_height="50dp"
+            android:layout_gravity="left"
+            android:layout_marginTop="5dp"
+            android:background="#172BCA"
+            android:gravity="center"
+            android:inputType="textAutoComplete"
+            android:text="JAN"
+            android:textColor="#fff"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_weight="0.7"
+            android:layout_height="50dp"
+            android:layout_gravity="right"
+            android:padding="5dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/Jun"
+            tools:ignore="MissingConstraints" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="0.3"
+            android:layout_height="50dp"
+            android:layout_gravity="left"
+            android:layout_marginTop="5dp"
+            android:background="#172BCA"
+            android:gravity="center"
+            android:inputType="textAutoComplete"
+            android:text="FEB"
+            android:textColor="#fff"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_weight="0.7"
+            android:layout_height="50dp"
+            android:layout_gravity="right"
+            android:padding="5dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/Feb"
+            tools:ignore="MissingConstraints" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="0.3"
+            android:layout_height="50dp"
+            android:layout_gravity="left"
+            android:layout_marginTop="5dp"
+            android:background="#172BCA"
+            android:gravity="center"
+            android:inputType="textAutoComplete"
+            android:text="March"
+            android:textColor="#fff"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_weight="0.7"
+            android:layout_height="50dp"
+            android:layout_gravity="right"
+            android:padding="5dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/Mach"
+            tools:ignore="MissingConstraints" />
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/box2bg"
+        android:text="Second quarter"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="0.3"
+            android:layout_height="50dp"
+            android:layout_gravity="left"
+            android:layout_marginTop="5dp"
+            android:background="#172BCA"
+            android:gravity="center"
+            android:inputType="textAutoComplete"
+            android:text="APR"
+            android:textColor="#fff"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_weight="0.7"
+            android:layout_height="50dp"
+            android:layout_gravity="right"
+            android:padding="5dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/APR"
+            tools:ignore="MissingConstraints" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="0.3"
+            android:layout_height="50dp"
+            android:layout_gravity="left"
+            android:layout_marginTop="5dp"
+            android:background="#172BCA"
+            android:gravity="center"
+            android:text="MAY"
+            android:textColor="#fff"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_weight="0.7"
+            android:layout_height="50dp"
+            android:layout_gravity="right"
+            android:padding="5dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/MAY"
+            tools:ignore="MissingConstraints" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="0.3"
+            android:layout_height="50dp"
+            android:layout_gravity="left"
+            android:layout_marginTop="5dp"
+            android:background="#172BCA"
+            android:gravity="center"
+            android:text="JUN"
+            android:textColor="#fff"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_weight="0.7"
+            android:layout_height="50dp"
+            android:layout_gravity="right"
+            android:padding="5dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/JUNn"
+            tools:ignore="MissingConstraints" />
+    </LinearLayout>
+</LinearLayout>
