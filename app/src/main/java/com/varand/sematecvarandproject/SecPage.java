@@ -6,25 +6,27 @@ import android.app.Activity;
 import android.app.Instrumentation;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
 public class SecPage extends AppCompatActivity {
-    final EditText edtName = findViewById(R.id.edtName);
-    final EditText edtFamilt = findViewById(R.id.edtFamilt);
-    final EditText edtFmail = findViewById(R.id.edtFmail);
-    final EditText edtAge = findViewById(R.id.edtAge);
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sec_page);
         Button btnReview = findViewById(R.id.btnReview);
-
+        Log.d("tag","varand55");
         btnReview.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(SecPage.this,SecPage.class);
+                final EditText edtName = findViewById(R.id.edtName);
+                final EditText edtFamilt = findViewById(R.id.edtFamilt);
+                final EditText edtFmail = findViewById(R.id.edtFmail);
+                final EditText edtAge = findViewById(R.id.edtAge);
+                Intent intent = new Intent(SecPage.this,ThierdPage.class);
                 intent.putExtra("Name",edtName.getText().toString());
                 intent.putExtra("edtFamilt",edtFamilt.getText().toString());
                 intent.putExtra("edtFmail",edtFmail.getText().toString());
@@ -48,7 +50,10 @@ public class SecPage extends AppCompatActivity {
         if(requestCode== 2)
         {
             if (resultCode ==  Activity.RESULT_OK) {
-
+                final EditText edtName = findViewById(R.id.edtName);
+                final EditText edtFamilt = findViewById(R.id.edtFamilt);
+                final EditText edtFmail = findViewById(R.id.edtFmail);
+                final EditText edtAge = findViewById(R.id.edtAge);
                 edtName.setText(data.getStringExtra("Name"));
                 edtFamilt.setText(data.getStringExtra("edtFamilt"));
                 edtFmail.setText(data.getStringExtra("edtFmail"));
