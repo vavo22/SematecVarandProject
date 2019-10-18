@@ -42,7 +42,7 @@
             android:layout_gravity="right"
             android:padding="5dp"
             android:scaleType="centerCrop"
-            android:src="@drawable/Jun"
+            android:src="@drawable/j"
             tools:ignore="MissingConstraints" />
     </LinearLayout>
     <LinearLayout
@@ -71,7 +71,7 @@
             android:layout_gravity="right"
             android:padding="5dp"
             android:scaleType="centerCrop"
-            android:src="@drawable/Feb"
+            android:src="@drawable/f"
             tools:ignore="MissingConstraints" />
     </LinearLayout>
     <LinearLayout
@@ -100,7 +100,7 @@
             android:layout_gravity="right"
             android:padding="5dp"
             android:scaleType="centerCrop"
-            android:src="@drawable/Mach"
+            android:src="@drawable/ma"
             tools:ignore="MissingConstraints" />
     </LinearLayout>
     <TextView
@@ -138,7 +138,7 @@
             android:layout_gravity="right"
             android:padding="5dp"
             android:scaleType="centerCrop"
-            android:src="@drawable/APR"
+            android:src="@drawable/a"
             tools:ignore="MissingConstraints" />
     </LinearLayout>
     <LinearLayout
@@ -166,7 +166,7 @@
             android:layout_gravity="right"
             android:padding="5dp"
             android:scaleType="centerCrop"
-            android:src="@drawable/MAY"
+            android:src="@drawable/mc"
             tools:ignore="MissingConstraints" />
     </LinearLayout>
     <LinearLayout
@@ -194,7 +194,7 @@
             android:layout_gravity="right"
             android:padding="5dp"
             android:scaleType="centerCrop"
-            android:src="@drawable/JUNn"
+            android:src="@drawable/j"
             tools:ignore="MissingConstraints" />
     </LinearLayout>
 </LinearLayout>

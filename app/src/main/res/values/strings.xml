@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Sematec Varand Project</string>
+    <string name="dialup">Dial Up</string>
+    <string name="profile">Profile</string>
 </resources>
