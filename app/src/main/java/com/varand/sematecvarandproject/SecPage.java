@@ -57,7 +57,8 @@ public class SecPage extends AppCompatActivity {
                 edtName.setText(data.getStringExtra("Name"));
                 edtFamilt.setText(data.getStringExtra("edtFamilt"));
                 edtFmail.setText(data.getStringExtra("edtFmail"));
-                edtAge.setText(data.getStringExtra("edtAge"));
+                edtAge.setText(data.getStringExtra("Age15"));
+
             }
         }
     }

@@ -34,7 +34,7 @@ public class ThierdPage extends AppCompatActivity {
                 intent.putExtra("Name",edtName.getText());
                 intent.putExtra("edtFamilt",edtFamilt.getText());
                 intent.putExtra("edtFmail",edtFmail.getText());
-                intent.putExtra("edtAge",edtAge.getText());
+                intent.putExtra("Age15",edtAge.getText());
                 setResult(Activity.RESULT_OK,intent);
                 finish();
             }
