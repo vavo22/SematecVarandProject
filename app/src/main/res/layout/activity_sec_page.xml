@@ -54,13 +54,25 @@
         android:hint="Age:"
         android:inputType="number"
         />
-    <Button
-        android:id="@+id/btnReview"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Review"
-        android:gravity="center"
-        android:layout_gravity="center"/>
-
+        android:layout_gravity="center"
+        android:gravity="center">
+        <Button
+            android:id="@+id/btnback"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Back"
+            android:gravity="center"
+            android:layout_gravity="center"/>
+        <Button
+            android:id="@+id/btnReview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Review"
+            android:gravity="center"
+            android:layout_gravity="center"/>
+    </LinearLayout>
 
 </LinearLayout>
