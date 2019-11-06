@@ -28,5 +28,9 @@ dependencies {
     implementation 'androidx.recyclerview:recyclerview:1.0.0'
     implementation 'com.android.support:appcompat-v7:29.1.0'
     implementation 'com.android.support:design:29.1.0'
-
+    implementation 'com.google.firebase:firebase-firestore:11.6.0'
+    implementation 'com.google.firebase:firebase-auth:11.6.0'
+    implementation 'com.loopj.android:android-async-http:1.4.9'
+    implementation 'com.google.code.gson:gson:2.8.5'
+    implementation 'com.squareup.picasso:picasso:2.71828'
 }
