@@ -53,14 +53,19 @@ public class MDetail2Activity extends AppCompatActivity {
                     TextView txtPlot = findViewById(R.id.txtPlotd);
                     TextView txtActors = findViewById(R.id.txtActorsd);
                     TextView txtCountry = findViewById(R.id.txtCountryd);
+                    TextView txtReleased = findViewById(R.id.txtReleased);
+                    TextView Runtime = findViewById(R.id.txtRuntime);
+                    TextView Awards = findViewById(R.id.txtAwards);
                     ImageView _ImageView = findViewById(R.id.ImageView);
                     Picasso.get().load(String.valueOf(jsonSub.get("Poster"))).into(_ImageView);
                     txtTitle.setText(String.valueOf(jsonSub.get("Title")));
                     txtYear.setText(String.valueOf(jsonSub.get("Year")));
                     txtPlot.setText(String.valueOf(jsonSub.get("Plot")));
                     txtActors.setText(String.valueOf(jsonSub.get("Actors")));
-                    txtCountry.setText(String.valueOf(jsonSub.get("Country")));
-
+                    txtCountry.setText(String.valueOf(jsonSub.get("Country")));//
+                    txtReleased.setText(String.valueOf(jsonSub.get("Released")));
+                    Runtime.setText(String.valueOf(jsonSub.get("Runtime")));
+                    Awards.setText(String.valueOf(jsonSub.get("Awards")));
                     Log.d("salam4","1" );
                 } catch (JSONException e) {
                     e.printStackTrace();

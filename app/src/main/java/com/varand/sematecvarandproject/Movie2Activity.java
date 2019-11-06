@@ -1,6 +1,7 @@
 package com.varand.sematecvarandproject;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import cz.msebera.android.httpclient.Header;
@@ -36,13 +37,31 @@ import java.io.InputStream;
 import java.net.URL;
 import java.util.ArrayList;
 
-public class Movie2Activity extends AppCompatActivity implements MyMoviesViewAdapter.ItemClickListener{
+public class Movie2Activity extends AppCompatActivity implements MyMoviesViewAdapter.ItemClickListener,MyRecyclerViewAdapter.ItemClickListener{
     MyMoviesViewAdapter adapter;
+    MyRecyclerViewAdapter adapterLeft;
     ArrayList<Search> MoviesArry;
+    DrawerLayout drawerLayout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_movie2);
+
+        //
+        ArrayList<DataModel> animalNames = new ArrayList<>();
+        animalNames.add(new DataModel(R.drawable.dial,"Dial"));
+        animalNames.add(new DataModel(R.drawable.profile,"Profile"));
+        animalNames.add(new DataModel(R.drawable.movie,"Movie Search"));
+        animalNames.add(new DataModel(R.drawable.camera,"Camera"));
+        //
+        RecyclerView recyclerView = findViewById(R.id.rvContacts);
+        recyclerView.setLayoutManager(new LinearLayoutManager(Movie2Activity.this));
+        adapterLeft = new MyRecyclerViewAdapter(Movie2Activity.this, animalNames);
+        adapterLeft.setClickListener(Movie2Activity.this);
+        recyclerView.setAdapter(adapterLeft);
+
+        //
+
         Button btnSearch = findViewById(R.id.btnSearch);
         btnSearch.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -106,8 +125,32 @@ public class Movie2Activity extends AppCompatActivity implements MyMoviesViewAda
 
     @Override
     public void onItemClick(View view, int position) {
-        Intent intent = new Intent(Movie2Activity.this,MDetail2Activity.class);
-        intent.putExtra("imdbCode",MoviesArry.get(position).getImdbID());
+        if (adapterLeft.getItem(position).name == "Dial" )
+        {
+            Intent intent = new Intent(Movie2Activity.this,DialPlace.class);
+            startActivity(intent);
+        }
+        else if (adapterLeft.getItem(position).name == "Profile")
+        {
+            Intent intent = new Intent(Movie2Activity.this,SecPage.class);
+            startActivity(intent);
+        }
+        else if (adapterLeft.getItem(position).name == "Movie Search")
+        {
+
+        }
+        else if (adapterLeft.getItem(position).name == "Camera")
+        {
+            Intent intent = new Intent(Movie2Activity.this,CameraActivity.class);
+            startActivity(intent);
+        }
+
+    }
+
+    @Override
+    public void onItemClickMovie(View view, int position) {
+        Intent intent = new Intent(Movie2Activity.this, MDetail2Activity.class);
+        intent.putExtra("imdbCode", MoviesArry.get(position).getImdbID());
         startActivity(intent);
     }
 }

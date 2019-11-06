@@ -73,7 +73,7 @@ public class MyMoviesViewAdapter extends RecyclerView.Adapter<MyMoviesViewAdapte
 
         @Override
         public void onClick(View view) {
-            if (mClickListener != null) mClickListener.onItemClick(view, getAdapterPosition());
+            if (mClickListener != null) mClickListener.onItemClickMovie(view, getAdapterPosition());
         }
     }
 
@@ -89,6 +89,6 @@ public class MyMoviesViewAdapter extends RecyclerView.Adapter<MyMoviesViewAdapte
 
     // parent activity will implement this method to respond to click events
     public interface ItemClickListener {
-        void onItemClick(View view, int position);
+        void onItemClickMovie(View view, int position);
     }
 }
