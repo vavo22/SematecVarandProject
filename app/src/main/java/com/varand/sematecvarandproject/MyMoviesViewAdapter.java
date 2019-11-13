@@ -45,6 +45,8 @@ public class MyMoviesViewAdapter extends RecyclerView.Adapter<MyMoviesViewAdapte
         holder.txtPlot.setText( mData.get(position).getPlot());
         String MPoster = mData.get(position).getTitle();
         Picasso.get().load(mData.get(position).getPoster()).into(holder.myimg);
+        //https://android-studio.ir/wp-content/uploads/2017/05/android_sqlite_database.png
+        //Picasso.get().load(mData.get(position).getPoster()).into(holder.myimg);
         //holder.myimg.setBackgroundResource(mData.get(position).getPoster());
     }
 

@@ -7,6 +7,12 @@
     android:orientation="vertical"
 
     tools:context=".MDetail2Activity">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"><LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -156,4 +162,20 @@
             android:textSize="20sp"/>
 
     </LinearLayout>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="15dp"
+                android:textAlignment="textStart"
+                android:text="خانه کاغذی فصل اول که با نام سرقت پول نیز شناخته میشود (Money Heist or La casa de papel) سریالی اکشن، ماجرایی و رازآلود محصول شبکه نتفلیکس NETFLIX کشور اسپانیا است که پخش آن از سال 2017 آغاز شده‌است. بازیگرانی چون اورسلا کوربرو، الوارو مورته، پدرو آلونسو، البا فلورس، ایتزیار ایتانو و میگل هرن در آن به ایفای نقش پرداخته‌اند. این سریال تاکنون برنده 5 جایزه و کاندیداری دریافت 13 جایزه بین المللی از جشنواره های فیلم شده است.خانه کاغذی فصل اول که با نام سرقت پول نیز شناخته میشود (Money Heist or La casa de papel) سریالی اکشن، ماجرایی و رازآلود محصول شبکه نتفلیکس NETFLIX کشور اسپانیا است که پخش آن از سال 2017 آغاز شده‌است. بازیگرانی چون اورسلا کوربرو، الوارو مورته، پدرو آلونسو، البا فلورس، ایتزیار ایتانو و میگل هرن در آن به ایفای نقش پرداخته‌اند. این سریال تاکنون برنده 5 جایزه و کاندیداری دریافت 13 جایزه بین المللی از جشنواره های فیلم شده است."></TextView>
+            </LinearLayout></ScrollView>
+    </LinearLayout></ScrollView>
+
 </LinearLayout>

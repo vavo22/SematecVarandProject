@@ -46,7 +46,7 @@ public class Movie2Activity extends AppCompatActivity implements MyMoviesViewAda
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_movie2);
-
+        Button Showitems = findViewById(R.id.button2);
         //
         ArrayList<DataModel> animalNames = new ArrayList<>();
         animalNames.add(new DataModel(R.drawable.dial,"Dial"));
@@ -59,9 +59,27 @@ public class Movie2Activity extends AppCompatActivity implements MyMoviesViewAda
         adapterLeft = new MyRecyclerViewAdapter(Movie2Activity.this, animalNames);
         adapterLeft.setClickListener(Movie2Activity.this);
         recyclerView.setAdapter(adapterLeft);
-
+        final SqliteHelper helper = new SqliteHelper(Movie2Activity.this, "Sematec", null, 1);
         //
-
+        Showitems.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MoviesArry = helper.getAllStudentsName();
+                Log.d("varandsql", String.valueOf(MoviesArry.size()));
+                RecyclerView recyclerView = findViewById(R.id.resnewMovies);
+                Log.d("varandsql", "3");
+                recyclerView.setLayoutManager(new LinearLayoutManager(Movie2Activity.this));
+                Log.d("varandsql", "4");
+                adapter = new MyMoviesViewAdapter(Movie2Activity.this, MoviesArry);
+                Log.d("varandsql", "5");
+                adapter.setClickListener(Movie2Activity.this);
+                Log.d("varandsql", "6");
+                recyclerView.setAdapter(adapter);
+                //Log.d("varandsql", "7");
+                //Toast.makeText(Movie2Activity.this, names, Toast.LENGTH_SHORT).show();
+                //https://android-studio.ir/wp-content/uploads/2017/05/android_sqlite_database.png
+            }
+        });
         Button btnSearch = findViewById(R.id.btnSearch);
         btnSearch.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -87,7 +105,7 @@ public class Movie2Activity extends AppCompatActivity implements MyMoviesViewAda
                             for (int i = 0; i < jsonoArray.length(); i++) {
                                 JSONObject jsonSub = jsonoArray.getJSONObject(i);
                                 MoviesArry.add(new Search(jsonSub.getString("Poster"),jsonSub.getString("Title"),jsonSub.getString("Year"),jsonSub.getString("imdbID"),"","",""));
-
+                                helper.insertMovies(jsonSub.getString("Title"), jsonSub.getString("Year"), jsonSub.getString("imdbID"),jsonSub.getString("Poster"));
                             }
                             RecyclerView recyclerView = findViewById(R.id.resnewMovies);
                             recyclerView.setLayoutManager(new LinearLayoutManager(Movie2Activity.this));
